@@ -33,21 +33,45 @@ const depoimento1larg = depoimento1.querySelector('div').length;
 var contadord1 = 0;
 function comment(){
     console.log(depoimento1larg)
-    /*contadord1++;
+    contadord1++;
 
     if(contadord1 == 1){
-        depoimento1.style="margin-top:-25%;"
+        depoimento1.style="transform: translateY(-100vh);"
 
     } else if(contadord1 == 2){
-        depoimento1.style="margin-top:-50%;"
+        depoimento1.style="transform: translateY(-200vh);"
 
     } else if(contadord1 == 3){
-        depoimento1.style="margin-top:-75%;"
+        depoimento1.style="transform: translateY(-300vh);"
 
     } else {
         contadord1 = 0;
-        depoimento1.style="margin-top:0;"
+        depoimento1.style="transform: translateY(0);"
 
-    }*/
+    }
+
+}
+
+const depoimento2 = document.getElementById("segundo")
+const depoimento2larg = depoimento1.querySelector('div').length;
+var contadord2 = 0;
+function comment2(){
+    console.log(depoimento2larg)
+    contadord2++;
+
+    if(contadord2 == 1){
+        depoimento2.style="transform: translateY($'{}');"
+
+    } else if(contadord2 == 2){
+        depoimento2.style="transform: translateY();"
+
+    } else if(contadord2 == 3){
+        depoimento2.style="transform: translateY();"
+
+    } else {
+        contadord2 = 0;
+        depoimento2.style="transform: translateY(0);"
+
+    }
 
 }
