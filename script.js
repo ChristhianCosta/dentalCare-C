@@ -27,3 +27,27 @@ function teste(){
     desliza()
 }
 )
+
+const depoimento1 = document.getElementById("primeiro")
+const depoimento1larg = depoimento1.querySelector('div').length;
+var contadord1 = 0;
+function comment(){
+    console.log(depoimento1larg)
+    /*contadord1++;
+
+    if(contadord1 == 1){
+        depoimento1.style="margin-top:-25%;"
+
+    } else if(contadord1 == 2){
+        depoimento1.style="margin-top:-50%;"
+
+    } else if(contadord1 == 3){
+        depoimento1.style="margin-top:-75%;"
+
+    } else {
+        contadord1 = 0;
+        depoimento1.style="margin-top:0;"
+
+    }*/
+
+}
