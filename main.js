@@ -28,21 +28,26 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 
 //=================CAROUSEL DEP================================================================
-const comentario1 = document.getElementById("comentario1")
-var index = 1;
+var depoimentos = document.getElementsByClassName('comentario')
+var index = 0;
+
+    function deslizaComentario(){
+      index+=1;
+      if(index > (depoimentos.length-1)){
+        index=0;
+      }
+      comentSlide(index)
+    }
+
+    setInterval(deslizaComentario,9000)
 
     function comentSlide(i){
         var control = document.getElementsByClassName('undcontrole')
-        var depoimentos = document.getElementsByClassName('comentario')
-        /*if(i > (depoimentos.length/2)){
-            index = 1
-            i = index
-        }*/
+        
+        index = i;
+        
         if(i == 0){
-            index = (depoimentos.length/2)
-            i = index
-        }
-        if(i == 1){
+
             control[0].style.backgroundColor = '#7D82B8'
             control[1].style.backgroundColor = '#EDF2FB'
             control[2].style.backgroundColor = '#EDF2FB'
@@ -50,13 +55,14 @@ var index = 1;
             control[4].style.backgroundColor = '#EDF2FB'
             control[5].style.backgroundColor = '#EDF2FB'
 
-
             depoimentos[0].style.display = 'block'
-            depoimentos[1].style.display = 'block'   
+            depoimentos[1].style.display = 'none'   
             depoimentos[2].style.display = 'none'
             depoimentos[3].style.display = 'none'
             depoimentos[4].style.display = 'none'
-        }if(i == 2){
+            depoimentos[5].style.display = 'none'
+        }
+        if(i == 1){
             control[0].style.backgroundColor = '#EDF2FB'
             control[1].style.backgroundColor = '#7D82B8'
             control[2].style.backgroundColor = '#EDF2FB'
@@ -64,12 +70,15 @@ var index = 1;
             control[4].style.backgroundColor = '#EDF2FB'
             control[5].style.backgroundColor = '#EDF2FB'
 
+
             depoimentos[0].style.display = 'none'
-            depoimentos[1].style.display = 'none'
-            depoimentos[2].style.display = 'block'
-            depoimentos[3].style.display = 'block'
+            depoimentos[1].style.display = 'block'   
+            depoimentos[2].style.display = 'none'
+            depoimentos[3].style.display = 'none'
             depoimentos[4].style.display = 'none'
-        }if(i == 3){
+            depoimentos[5].style.display = 'none'
+
+          }if(i == 2){
             control[0].style.backgroundColor = '#EDF2FB'
             control[1].style.backgroundColor = '#EDF2FB'
             control[2].style.backgroundColor = '#7D82B8'
@@ -77,13 +86,63 @@ var index = 1;
             control[4].style.backgroundColor = '#EDF2FB'
             control[5].style.backgroundColor = '#EDF2FB'
 
+            depoimentos[0].style.display = 'none'
+            depoimentos[1].style.display = 'none'
+            depoimentos[2].style.display = 'block'
+            depoimentos[3].style.display = 'none'
+            depoimentos[4].style.display = 'none'
+            depoimentos[5].style.display = 'none'
+
+        }if(i == 3){
+            control[0].style.backgroundColor = '#EDF2FB'
+            control[1].style.backgroundColor = '#EDF2FB'
+            control[2].style.backgroundColor = '#EDF2FB'
+            control[3].style.backgroundColor = '#7D82B8'
+            control[4].style.backgroundColor = '#EDF2FB'
+            control[5].style.backgroundColor = '#EDF2FB'
+
 
             depoimentos[0].style.display = 'none'
             depoimentos[1].style.display = 'none'
             depoimentos[2].style.display = 'none'
-            depoimentos[3].style.display = 'none'
-            depoimentos[4].style.display = 'block'
-        }
+            depoimentos[3].style.display = 'block'
+            depoimentos[4].style.display = 'none'
+            depoimentos[5].style.display = 'none'
+
+        }if(i == 4){
+          control[0].style.backgroundColor = '#EDF2FB'
+          control[1].style.backgroundColor = '#EDF2FB'
+          control[2].style.backgroundColor = '#EDF2FB'
+          control[3].style.backgroundColor = '#EDF2FB'
+          control[4].style.backgroundColor = '#7D82B8'
+          control[5].style.backgroundColor = '#EDF2FB'
+
+
+          depoimentos[0].style.display = 'none'
+          depoimentos[1].style.display = 'none'
+          depoimentos[2].style.display = 'none'
+          depoimentos[3].style.display = 'none'
+          depoimentos[4].style.display = 'block'
+          depoimentos[5].style.display = 'none'
+
+      }if(i == 5){
+        control[0].style.backgroundColor = '#EDF2FB'
+        control[1].style.backgroundColor = '#EDF2FB'
+        control[2].style.backgroundColor = '#EDF2FB'
+        control[3].style.backgroundColor = '#EDF2FB'
+        control[4].style.backgroundColor = '#EDF2FB'
+        control[5].style.backgroundColor = '#7D82B8'
+
+
+        depoimentos[0].style.display = 'none'
+        depoimentos[1].style.display = 'none'
+        depoimentos[2].style.display = 'none'
+        depoimentos[3].style.display = 'none'
+        depoimentos[4].style.display = 'none'
+        depoimentos[5].style.display = 'block'
+
+    }
+
         index = i
         console.log(i)
     }

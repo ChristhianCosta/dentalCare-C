@@ -424,8 +424,8 @@ font-weight: bold;
 }
 /*==============================DEPOIMENTOS===================================*/
 #depoimentos {
-  max-height: 300px;
-  /*height: 80vh;*/
+  max-height: 500px;
+  height: 40vh;
   width: 100vw;
   padding: 1rem;
   display: flex;
@@ -441,9 +441,18 @@ font-weight: bold;
   text-align: center;
   padding: 1rem;
 }
-
+@media (max-width:500px){
+  #depoimentos h1{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  #depoimentos .externa{
+    margin-top: 2.5rem;
+  }
+}
 #externa {
-  width: 500vw;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -471,8 +480,10 @@ font-weight: bold;
   width: 80vw;
   max-width: 600px;
   margin: 0 auto;
-  transition: all 0.5 ease-in-out;
 
+}
+.comentario:not(#comentario1){
+  display:none
 }
 #controle{
   width: 100%;
@@ -505,7 +516,7 @@ font-weight: bold;
   width: 100%;
   flex-direction: column;
   background-color: var(--cor2);
-
+  margin-top: 3rem;
 }
 .sobre-container p2{
   width: 80%;
