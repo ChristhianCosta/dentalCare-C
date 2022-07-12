@@ -28,7 +28,28 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 
 //=================CAROUSEL DEP================================================================
+const comentario1 = document.getElementById("comentario1")
+var comentc = 0;
+function comentario(){
+    comentc++;
+    console.log(comentc);
 
+    if(comentc == 1){
+      comentario1.style="margin-left:-20%;"
+
+    } else if(comentc == 2){
+      comentario1.style="margin-left:-40%;"
+
+    } else if(comentc == 3){
+      comentario1.style="margin-left:-60%;"
+
+    } else {
+        comentc = 0;
+        comentario1.style="margin-left:0;"
+
+    }
+}
+setInterval(desliza, 9000);
 // ==================CAROUSEL EST===============================================================
 const slides = document.getElementById("gancho")
 var contador = 0;
