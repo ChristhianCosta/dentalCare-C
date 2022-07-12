@@ -29,27 +29,65 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 //=================CAROUSEL DEP================================================================
 const comentario1 = document.getElementById("comentario1")
-var comentc = 0;
-function comentario(){
-    comentc++;
-    console.log(comentc);
+var index = 1;
 
-    if(comentc == 1){
-      comentario1.style="margin-left:-20%;"
+  function comentario(n){
+    comentSlide(n)
+  }
+   
 
-    } else if(comentc == 2){
-      comentario1.style="margin-left:-40%;"
+    function comentSlide(i){
+        var control = document.getElementsByClassName('undcontrole')
+        var depoimentos = document.getElementsByClassName('comentario')
+        if(i > (depoimentos.length/2)){
+            index = 1
+            i = index
+        }
+        if(i == 0){
+            index = (depoimentos.length/2)
+            i = index
+        }
+        if(i == 1){
+            control[0].style.backgroundColor = '#7D82B8'
+            control[1].style.backgroundColor = '#EDF2FB'
+            control[2].style.backgroundColor = '#EDF2FB'
+            control[3].style.backgroundColor = '#EDF2FB'
+            control[4].style.backgroundColor = '#EDF2FB'
 
-    } else if(comentc == 3){
-      comentario1.style="margin-left:-60%;"
+            depoimentos[0].style.display = 'block'
+            depoimentos[1].style.display = 'block'   
+            depoimentos[2].style.display = 'none'
+            depoimentos[3].style.display = 'none'
+            depoimentos[4].style.display = 'none'
+        }if(i == 2){
+            control[0].style.backgroundColor = '#EDF2FB'
+            control[1].style.backgroundColor = '#7D82B8'
+            control[2].style.backgroundColor = '#EDF2FB'
+            control[3].style.backgroundColor = '#EDF2FB'
+            control[4].style.backgroundColor = '#EDF2FB'
 
-    } else {
-        comentc = 0;
-        comentario1.style="margin-left:0;"
+            depoimentos[0].style.display = 'none'
+            depoimentos[1].style.display = 'none'
+            depoimentos[2].style.display = 'block'
+            depoimentos[3].style.display = 'block'
+            depoimentos[4].style.display = 'none'
+        }if(i == 3){
+            control[0].style.backgroundColor = '#EDF2FB'
+            control[1].style.backgroundColor = '#EDF2FB'
+            control[2].style.backgroundColor = '#7D82B8'
+            control[3].style.backgroundColor = '#EDF2FB'
+            control[4].style.backgroundColor = '#EDF2FB'
 
+            depoimentos[0].style.display = 'none'
+            depoimentos[1].style.display = 'none'
+            depoimentos[2].style.display = 'none'
+            depoimentos[3].style.display = 'none'
+            depoimentos[4].style.display = 'block'
+        }
+        index = i
+        console.log(i)
     }
-}
-setInterval(desliza, 9000);
+
 // ==================CAROUSEL EST===============================================================
 const slides = document.getElementById("gancho")
 var contador = 0;
