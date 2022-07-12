@@ -31,18 +31,13 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 const comentario1 = document.getElementById("comentario1")
 var index = 1;
 
-  function comentario(n){
-    comentSlide(n)
-  }
-   
-
     function comentSlide(i){
         var control = document.getElementsByClassName('undcontrole')
         var depoimentos = document.getElementsByClassName('comentario')
-        if(i > (depoimentos.length/2)){
+        /*if(i > (depoimentos.length/2)){
             index = 1
             i = index
-        }
+        }*/
         if(i == 0){
             index = (depoimentos.length/2)
             i = index
@@ -53,6 +48,8 @@ var index = 1;
             control[2].style.backgroundColor = '#EDF2FB'
             control[3].style.backgroundColor = '#EDF2FB'
             control[4].style.backgroundColor = '#EDF2FB'
+            control[5].style.backgroundColor = '#EDF2FB'
+
 
             depoimentos[0].style.display = 'block'
             depoimentos[1].style.display = 'block'   
@@ -65,6 +62,7 @@ var index = 1;
             control[2].style.backgroundColor = '#EDF2FB'
             control[3].style.backgroundColor = '#EDF2FB'
             control[4].style.backgroundColor = '#EDF2FB'
+            control[5].style.backgroundColor = '#EDF2FB'
 
             depoimentos[0].style.display = 'none'
             depoimentos[1].style.display = 'none'
@@ -77,6 +75,8 @@ var index = 1;
             control[2].style.backgroundColor = '#7D82B8'
             control[3].style.backgroundColor = '#EDF2FB'
             control[4].style.backgroundColor = '#EDF2FB'
+            control[5].style.backgroundColor = '#EDF2FB'
+
 
             depoimentos[0].style.display = 'none'
             depoimentos[1].style.display = 'none'
